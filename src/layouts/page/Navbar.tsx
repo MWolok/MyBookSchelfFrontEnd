@@ -19,10 +19,22 @@ export const Navbar = () => {
 				<div className="collapse navbar-collapse" id="navbarNavDropdown">
 					<ul className="navbar-nav">
 						<li className="nav-item">
-							<a className="nav-link" href="#">
-								{" "}
+							<a className="nav-link" href="/">
 								Home
 							</a>
+							
+						</li>
+						<li className="nav-item">
+							<a className="nav-link" href="/myshelf">
+								MyBooks
+							</a>
+							
+						</li>
+						<li className="nav-item">
+							<a className="nav-link" href="/addbook">
+								AddBook
+							</a>
+							
 						</li>
 					</ul>
 					<ul className="navbar-nav ms-auto">
@@ -32,7 +44,7 @@ export const Navbar = () => {
 							</a>
 						</li>
 						<li className="nav-item m-1">
-							<a type="button" className="btn btn-outline-light" href="#">
+							<a type="button" className="btn btn-outline-light" href="/register">
 								Register
 							</a>
 						</li>
