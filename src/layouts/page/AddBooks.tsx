@@ -10,7 +10,8 @@ export const AddBooks = () => {
 	const [displaySucces, setDisplaySucess] = useState(false);
 
 	async function submitNewBook() {
-		let id: number = 2;
+		let id: any = localStorage.getItem('currentId');
+		
 		const url: string = `http://localhost:8080/api/${id}/books`;
 		if (title !== "" && author !== "") {
 			const book: AddBookModel = new AddBookModel(title, author);

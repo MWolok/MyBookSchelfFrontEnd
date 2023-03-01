@@ -1,8 +1,8 @@
 class SignUpmodel{
-    userNameOrEmail:string;
+    usernameOrEmail:string;
     password:string;
-    constructor(userNameOrPassword:string, password:string){
-        this.userNameOrEmail=userNameOrPassword;
+    constructor(usernameOrPassword:string, password:string){
+        this.usernameOrEmail=usernameOrPassword;
         this.password=password;
     }
 }

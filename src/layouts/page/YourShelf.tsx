@@ -11,7 +11,7 @@ export const YourShelf  =()  => {
 	useEffect(() => {
 		const fetchBooks = async () => {
 			//for test
-			const id: number = 2;
+			const id: any = localStorage.getItem('currentId');
 			const baseUrl: string = `http://localhost:8080/api/${id}/allbooks`;
 			const response = await fetch(baseUrl);
 			if (!response.ok) {

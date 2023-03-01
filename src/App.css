@@ -15,7 +15,11 @@
     text-align: center;
     justify-content: center;
 } */
-
+/* .footer{
+max-height: 20vh;
+position: sticky;
+bottom: 0;
+} */
 .dark-overlay {
 	background-color: rgba(0, 0, 0, 0.35);
 	position: absolute;

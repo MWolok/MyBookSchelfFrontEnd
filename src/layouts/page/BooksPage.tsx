@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import BookModel from "../../models/BookModel";
 import React from "react";
 
-
 //@ts-ignore
 export const BooksPage: React.FC<{ book: BookModel }> = (props) => {
 	const [books, setBooks] = useState<BookModel[]>([]);
@@ -12,8 +11,11 @@ export const BooksPage: React.FC<{ book: BookModel }> = (props) => {
 	useEffect(() => {
 		const fetchBooks = async () => {
 			//for test
-			const id: number = 2;
-			const baseUrl: string = `http://localhost:8080/api/${id}/allbooks`;
+			const id: any = localStorage.getItem("currentId");
+			console.log(typeof id);
+			const idx:number =+id;
+			console.log(idx)
+			const baseUrl: string = `http://localhost:8080/api/${idx}/allbooks`;
 			const response = await fetch(baseUrl);
 			if (!response.ok) {
 				throw new Error("Somthing went wrong!");

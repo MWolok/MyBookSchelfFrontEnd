@@ -11,26 +11,32 @@ import { Redirect, Route, Switch } from "react-router-dom";
 import { Heros } from "./layouts/page/Heros";
 import { Register } from "./layouts/page/Register";
 import { AddBooks } from "./layouts/page/AddBooks";
+import { Signup } from "./layouts/page/Signup";
 
 function App() {
 	return (
-		<div>
+		<div className="d-flex flex-column min-vh-100">
 			<Navbar />
-			<Switch>
-				<Route path="/" exact>
-					<HomePage />
-					<Heros />
-				</Route>
-				<Route path="/myshelf">
-					<YourShelf />
-				</Route>
-				<Route path="/addbook">
-					<AddBooks />
-				</Route>
-				<Route path="/register">
-					<Register/>
-				</Route>
-			</Switch>
+			<div className="flex-grow-1">
+				<Switch>
+					<Route path="/" exact>
+						<HomePage />
+						<Heros />
+					</Route>
+					<Route path="/myshelf">
+						<YourShelf />
+					</Route>
+					<Route path="/addbook">
+						<AddBooks />
+					</Route>
+					<Route path="/register">
+						<Register />
+					</Route>
+					<Route path="/login">
+						<Signup />
+					</Route>
+				</Switch>
+			</div>
 			<Footer />
 		</div>
 	);

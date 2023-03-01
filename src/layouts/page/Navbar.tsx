@@ -2,6 +2,21 @@ import React from "react";
 
 
 export const Navbar = () => {
+
+	const isUserLogedin = () =>{
+		if(localStorage.getItem('currentId')!==''){
+			return(
+				<li className="nav-item">
+							<a className="nav-link" href="/myshelf">
+								MyBooks
+							</a>
+							
+						</li>
+			);
+		}
+	}
+
+
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark main-color py-3">
 			<div className="container-fluid">
@@ -24,6 +39,7 @@ export const Navbar = () => {
 							</a>
 							
 						</li>
+						
 						<li className="nav-item">
 							<a className="nav-link" href="/myshelf">
 								MyBooks
@@ -37,9 +53,12 @@ export const Navbar = () => {
 							
 						</li>
 					</ul>
-					<ul className="navbar-nav ms-auto">
+					<ul className="navbar-nav ms-auto">{
+						
+
+					}
 						<li className="nav-item m-1">
-							<a type="button" className="btn btn-outline-light" href="#">
+							<a type="button" className="btn btn-outline-light" href="/login">
 								Sign in
 							</a>
 						</li>
