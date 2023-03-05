@@ -16,23 +16,33 @@ import { Signup } from "./layouts/page/Signup";
 function App() {
 	return (
 		<div className="d-flex flex-column min-vh-100">
-			<Navbar />
+			<Route path="/log">
+				<Navbar />
+				<HomePage />
+				<Heros />
+			</Route>
+
 			<div className="flex-grow-1">
 				<Switch>
 					<Route path="/" exact>
+						<Navbar />
 						<HomePage />
 						<Heros />
 					</Route>
 					<Route path="/myshelf">
+						<Navbar />
 						<YourShelf />
 					</Route>
 					<Route path="/addbook">
+						<Navbar />
 						<AddBooks />
 					</Route>
 					<Route path="/register">
+						<Navbar/>
 						<Register />
 					</Route>
 					<Route path="/login">
+						<Navbar />
 						<Signup />
 					</Route>
 				</Switch>

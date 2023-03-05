@@ -1,14 +1,14 @@
 import { useState } from "react";
 import React from "react";
 import SignUpmodel from "../../models/SignUpmodel";
-import { Redirect } from "react-router-dom";
-import { Router } from "react-router-dom";
+
 import { useHistory } from "react-router-dom";
 
 export const Signup = () => {
 	const [usernameOrEmail, setUsernameOrEmail] = useState("");
 	const [password, setPassword] = useState("");
-	const [currentUserId, setCurrentUSerId] = useState(false);
+	// const [currentUserId, setCurrentUSerId] = 
+	// useState(localStorage.getItem(localStorage.getItem("authenticated")|| false));
     const history = useHistory();
 	
 
@@ -42,12 +42,12 @@ export const Signup = () => {
 			//catch user id and pass to another comp tdo
 			const responseJson: string = await log.json();
 			localStorage.setItem("currentId", JSON.stringify(responseJson));
-			setCurrentUSerId(true);
+			
 	console.log(localStorage.getItem('currentId'));
 		
 			setUsernameOrEmail("");
 			setPassword("");
-			history.push("/");
+			history.push("/log");
 		}}
 	}
 	return (
