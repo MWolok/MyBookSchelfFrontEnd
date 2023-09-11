@@ -31,6 +31,10 @@ To run this application, follow these steps:
 
 2.Using the Application
 -Register for an account or log in if you already have one.
+
 -Add books to your virtual shelf.
+
 -Remove books from your shelf as needed.
-Your Shelf aims to simplify your book management and reading planning.
+
+-Your Shelf aims to simplify your book management and reading planning.
+
