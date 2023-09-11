@@ -1,4 +1,4 @@
-# Your Shelf (Twoja Polka)
+# Your Shelf
 
 Your Shelf is a project designed to help you manage your books and plan your reading goals within a year or a shorter timeframe. The application allows users to register, add, and remove books from their virtual shelf (account).
 
